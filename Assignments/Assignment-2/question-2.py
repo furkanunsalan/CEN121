@@ -4,7 +4,7 @@ def main():
     for line in file:
         line_counter += 1
     file.close()
-    print(line_counter)
+    print(f"{line_counter} names are present in names.txt file")
 
 
 if __name__ == '__main__':

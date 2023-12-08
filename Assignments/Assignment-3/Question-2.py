@@ -33,6 +33,7 @@ def main():
 
     print(f"The student {grade}. Student has {true_answers} true and {false_answers} wrong questions.")
 
+main()
 
-if __name__ == '__main__':
-    main()
+
+

@@ -25,6 +25,7 @@ def bar_charts():
     bar_width = 5
 
     plt.bar(left_edges, heights, bar_width, color=("r", "g", "b", "m", "k"))
+    # plt.barh() for horizontal bar charts
 
     plt.title("Sales by Year")
     plt.xlabel("Year")

@@ -11,7 +11,7 @@ def main():
         "C", "B", "B", "D", "A"
     ]
 
-    answer_file = open("student_answers.txt", "r")
+    answer_file = open("Assignments/Assignment-3/student_answers.txt", "r")
 
     for line in answer_file:
         question_answer = line.rstrip("\n")

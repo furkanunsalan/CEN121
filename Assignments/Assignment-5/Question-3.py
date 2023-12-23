@@ -5,9 +5,9 @@ def solution():
     winner_by_year = {}
 
     while True:
-        input_year = int(input("Enter a year between 1903-2009: "))
+        input_year = int(input("Enter a year between 1903-2006: "))
 
-        if input_year >= 1903 and input_year <= 2009:
+        if input_year >= 1903 and input_year <= 2006:
             for line in file:
                 line = line.strip()
 
@@ -26,4 +26,3 @@ def solution():
             print("Invalid year.")
 
 solution()
-    

@@ -3,6 +3,8 @@ def solution():
     words = file.read().split()
     file.close()
     words_set = set(words)
-    print(words_set)
+    print("Here are the unique words in the file:")
+    for word in words_set:
+        print(word)
 
 solution()

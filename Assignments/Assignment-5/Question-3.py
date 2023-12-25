@@ -26,3 +26,5 @@ def solution():
             print("Invalid year.")
 
 solution()
+# For the given values in WorldSeriesWinners.txt, 
+# years 2007 and 2008 are invalid so I excluded them from the program.

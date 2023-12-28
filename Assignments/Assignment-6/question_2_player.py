@@ -4,9 +4,10 @@ class Player:
         self.player_no = player_no
         self.score = score
     
-    def change_score(self, points):
+    def increase_score(self, points):
         self.score += points
-        
+
+
 player1_name = input("Enter name for Player-1: ")
 player2_name = input("Enter name for Player-2: ")
 

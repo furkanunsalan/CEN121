@@ -1,5 +1,7 @@
 from question_2_player import player1, player2
-from question_2_questions import questions
+from question_2_questions import Question
+
+question = Question()
 
 
 class Trivia:
@@ -13,28 +15,28 @@ class Trivia:
             self.current_player = player2
         else:
             self.current_player = player1
-        
     
-    def ask_questions(self):
-        for key in questions:
+    def start_the_game(self):
+        for i in range(10):
             print()
+            question.choose_question()
+            
             print(f"{self.current_player.name}'s turn")
-            print(key)
+            print(question.question)
             print()
             
-            for choice in questions[key][1]:
+            for choice in question.options:
                 print(choice)
             print()
-                
+            
             answer = input("Enter the answer phrase: ")
             
-            if answer.lower() == questions[key][0]:
+            if answer.lower() == question.answer:
                 print("Correct Answer!")
-                self.current_player.change_score(1)
+                self.current_player.increase_score(1)
                 self.change_turn()
-                    
             else:
-                print(f"Incorrect Answer! The correct answer is {questions[key][0].upper()}")
+                print(f"Incorrect Answer! The correct answer is {question.answer.upper()}")
                 self.change_turn()
             
     def evaluate_winner(self):
@@ -49,5 +51,4 @@ class Trivia:
             return f"{player2.name} wins the game!"
         else:
             return f"{player1.name} and {player2.name} are tied!"
-        
             

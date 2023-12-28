@@ -1,4 +1,6 @@
-questions = {
+import random
+
+QUESTION_DICT = {
     "What does HTML stand for?": ["a", 
         [
             "A) Hyper Text Markup Language", 
@@ -80,3 +82,13 @@ questions = {
         ]
     ]
 }
+
+
+class Question:    
+    def choose_question(self):
+        random_question = random.choice(list(QUESTION_DICT.keys()))
+        self.question = random_question
+        self.answer = QUESTION_DICT[random_question][0]
+        self.options = QUESTION_DICT[random_question][1]
+        del QUESTION_DICT[random_question]
+        

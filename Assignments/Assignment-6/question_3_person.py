@@ -3,6 +3,4 @@ class Person:
         self.name = name
         self.address = address
         self.phone = phone_number
-        
-    
     
